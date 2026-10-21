@@ -3,8 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="The online home of Steiner Artisan Farm.">
-    <title>Steiner Artisan Farm</title>
+    <meta name="description" content="An independent page about Steiner Artisan Farm in Walnutport, Pennsylvania, with farm photographs and a personal account submitted by the site owner.">
+    <meta name="keywords" content="Lisa Steiner, Lisa Steiner graphic artist, Lisa Steiner horses, Lisa Steiner carriage rides, Lisa Steiner Pennsylvania">
+    <title>Steiner Artisan Farm | Independent Information</title>
+    <link rel="canonical" href="https://steinerartisanfarm.com/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Steiner Artisan Farm">
+    <meta property="og:title" content="Steiner Artisan Farm | Independent Information">
+    <meta property="og:description" content="An independent page about Steiner Artisan Farm in Walnutport, Pennsylvania, with farm photographs and a personal account submitted by the site owner.">
+    <meta property="og:url" content="https://steinerartisanfarm.com/">
+    <meta property="og:image" content="https://steinerartisanfarm.com/images/lisa_wagon_2.jpg">
+    <meta property="og:image:alt" content="Lisa Steiner on a red wagon with two harnessed horses.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Steiner Artisan Farm | Independent Information">
+    <meta name="twitter:description" content="An independent page about Steiner Artisan Farm in Walnutport, Pennsylvania, with farm photographs and a personal account submitted by the site owner.">
+    <meta name="twitter:image" content="https://steinerartisanfarm.com/images/lisa_wagon_2.jpg">
+    <meta name="twitter:image:alt" content="Lisa Steiner on a red wagon with two harnessed horses.">
     <style>
       :root {
         color-scheme: light;
@@ -20,53 +35,201 @@
       body {
         min-height: 100vh;
         margin: 0;
-        display: grid;
-        place-items: center;
-        padding: 2rem;
+        padding: clamp(1rem, 4vw, 3rem);
       }
 
       main {
-        width: min(100%, 48rem);
-        padding: clamp(2rem, 8vw, 5rem);
-        text-align: center;
+        width: min(100%, 64rem);
+        margin: 0 auto;
+        overflow: hidden;
         background: #fffdf7;
         border: 1px solid #d9dfd2;
         border-radius: 1rem;
         box-shadow: 0 1rem 3rem rgb(38 59 44 / 8%);
       }
 
-      p {
+      .masthead {
+        display: flex;
+        align-items: center;
+        gap: clamp(1rem, 4vw, 2rem);
+        padding: clamp(1.25rem, 4vw, 2.5rem);
+      }
+
+      .logo {
+        display: block;
+        width: clamp(5rem, 17vw, 9rem);
+        height: auto;
+        flex-shrink: 0;
+        border-radius: 0.5rem;
+      }
+
+      .eyebrow {
         margin: 0;
         color: #57705a;
         font-family: Arial, sans-serif;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         font-weight: 700;
         letter-spacing: 0.14em;
         text-transform: uppercase;
+        line-height: 1.6;
       }
 
       h1 {
-        margin: 1.25rem 0;
-        font-size: clamp(2.5rem, 9vw, 4.5rem);
-        line-height: 1.05;
+        margin: 0.5rem 0 0;
+        font-size: clamp(1.75rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        overflow-wrap: anywhere;
       }
 
-      main > span {
+      .banner {
         display: block;
-        max-width: 28rem;
-        margin: 0 auto;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 960 / 580;
+      }
+
+      .content {
+        padding: 0 clamp(1.25rem, 5vw, 4rem) clamp(1.5rem, 5vw, 4rem);
+      }
+
+      .profile {
+        position: relative;
+        width: fit-content;
+        margin: -3rem 0 1.5rem;
+      }
+
+      .portrait {
+        display: block;
+        width: clamp(7rem, 20vw, 10rem);
+        height: auto;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border: 0.375rem solid #fffdf7;
+        border-radius: 50%;
+        box-shadow: 0 0.5rem 1.5rem rgb(38 59 44 / 12%);
+      }
+
+      .profile figcaption {
+        margin-top: 0.5rem;
+        text-align: center;
+        font-family: Arial, sans-serif;
+        font-size: 0.85rem;
+        font-weight: 700;
+      }
+
+      h2 {
+        margin: 0 0 1rem;
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        line-height: 1.2;
+      }
+
+      p {
+        margin: 0 0 1rem;
         color: #596459;
         font-family: Arial, sans-serif;
-        font-size: 1.1rem;
+        font-size: 1rem;
         line-height: 1.7;
+      }
+
+      .introduction {
+        max-width: 42rem;
+      }
+
+      .warning {
+        margin-top: 2rem;
+        padding: clamp(1.25rem, 4vw, 2rem);
+        background: #fff5e6;
+        border: 1px solid #e4c998;
+        border-left: 0.3rem solid #9b5a16;
+        border-radius: 0.5rem;
+      }
+
+      .warning .eyebrow {
+        margin-bottom: 0.75rem;
+        color: #81460d;
+      }
+
+      .warning h2 {
+        color: #673e17;
+      }
+
+      .warning a {
+        color: inherit;
+        text-underline-offset: 0.15em;
+      }
+
+      .testimonial,
+      blockquote {
+        margin: 0;
+      }
+
+      blockquote p {
+        color: #594731;
+      }
+
+      .testimonial figcaption {
+        color: #6e563a;
+        font-family: Arial, sans-serif;
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      footer {
+        margin-top: 2rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid #d9dfd2;
+      }
+
+      footer p {
+        margin: 0;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 30rem) {
+        .masthead {
+          flex-direction: column;
+          text-align: center;
+        }
       }
     </style>
   </head>
   <body>
     <main>
-      <p>Welcome to</p>
-      <h1>Steiner Artisan Farm</h1>
-      <span>A new online home is taking root. Please check back soon.</span>
+      <header>
+        <div class="masthead">
+          <img class="logo" src="images/logo.jpg" alt="Steiner Artisan Farm logo" width="350" height="322">
+          <div>
+            <p class="eyebrow">formerly of Walnutport, Pennsylvania</p>
+            <h1>Steiner Artisan Farm</h1>
+          </div>
+        </div>
+        <img class="banner" src="images/lisa_wagon_2.jpg" alt="Lisa Steiner on a red wagon with two harnessed horses." width="960" height="580" fetchpriority="high">
+      </header>
+      <div class="content">
+        <figure class="profile">
+          <img class="portrait" src="images/lisa_dog.jpg" alt="Lisa Steiner with a dog." width="750" height="750">
+          <figcaption>Lisa Steiner</figcaption>
+        </figure>
+        <section class="introduction" aria-labelledby="about-heading">
+          <h2 id="about-heading">About Steiner Artisan Farm</h2>
+          <p>Steiner Artisan Farm is associated with Lisa Steiner formerly of Walnutport, Pennsylvania. This independent page brings together photographs of Lisa and the farm, along with a personal account submitted by the site owner.</p>
+          <p>This is not the farm's official website and is not affiliated with or endorsed by Lisa Steiner.</p>
+        </section>
+        <section class="warning" aria-labelledby="warning-heading">
+          <p class="eyebrow">A word of caution</p>
+          <h2 id="warning-heading">Personal lending experience</h2>
+          <figure class="testimonial">
+            <blockquote>
+              <p>In April 2025, I provided a $5,500 personal loan to Lisa Steiner to help prevent foreclosure, with the understanding that the property would be sold and the loan repaid. (With compounding interest, I calculate the outstanding balance to be $10,500, currently.) In August 2025, I observed that the property's listed asking price was above the Zestimate shown on Zillow, and advised more aggressive pricing in order to be a motivated seller. In my experience, the agreed repayment terms were not met. Based on this experience, I would not lend money to or enter another business arrangement with her. I encourage anyone considering a private loan to seek independent advice and document the terms in writing.</p>
+              <p>The home I tried to help save from foreclosure was subsequently foreclosed on and sold at a Sheriff's Sale on July 10, 2026, as recorded in the <a href="assets/2026_sheriffs_sale.pdf">Sheriff's proposed schedule of distribution (PDF)</a>. See Northampton County case <a href="https://web.northamptoncounty.org/CountySuite.EServices/CaseDetails/Index/576208">C-48-CV-2022-01459 (foreclosure and Sheriff's Sale)</a>. An ejectment (eviction) action was later filed against Lisa Steiner in case <a href="https://web.northamptoncounty.org/CountySuite.EServices/CaseDetails/Index/685068">C-48-CV-2026-09193 (ejectment proceedings)</a>.</p>
+            </blockquote>
+            <figcaption>Personal account submitted by the site owner.</figcaption>
+          </figure>
+        </section>
+        <footer>
+          <p>Independent information about Steiner Artisan Farm. The personal account above reflects the site owner's experience.</p>
+        </footer>
+      </div>
     </main>
   </body>
 </html>
